@@ -26,20 +26,48 @@
 <body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-brand-primary selection:text-white">
 
   <!-- ================= NAVIGASI ================= -->
+  <!-- ================= NAVIGASI ================= -->
   <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-bold text-brand-dark tracking-tight">
         Nama<span class="text-brand-primary">Kamu.</span>
       </a>
+      
+      <!-- Navigasi Desktop (Disembunyikan di HP dengan 'hidden md:flex') -->
       <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
         <a href="#tentang" class="hover:text-brand-primary transition-colors">Tentang</a>
         <a href="#keahlian" class="hover:text-brand-primary transition-colors">Keahlian</a>
+        <a href="#kualifikasi" class="hover:text-brand-primary transition-colors">Kualifikasi</a>
         <a href="#proyek" class="hover:text-brand-primary transition-colors">Proyek</a>
         <a href="#kontak" class="hover:text-brand-primary transition-colors">Kontak</a>
       </nav>
-      <a href="#kontak" class="text-sm font-semibold bg-brand-light text-brand-primary px-4 py-2 rounded-full border border-blue-200 hover:bg-brand-primary hover:text-white transition-all">
+      
+      <!-- Tombol Desktop (Disembunyikan di HP dengan 'hidden md:inline-block') -->
+      <a href="#kontak" class="hidden md:inline-block text-sm font-semibold bg-brand-light text-brand-primary px-4 py-2 rounded-full border border-blue-200 hover:bg-brand-primary hover:text-white transition-all">
         Hubungi Saya
       </a>
+
+      <!-- Tombol Hamburger (Hanya Muncul di HP dengan 'md:hidden') -->
+      <button id="hamburger-btn" class="md:hidden text-slate-600 hover:text-brand-primary focus:outline-none" aria-label="Buka Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <!-- Garis Tiga (Hamburger) -->
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Dropdown Menu Mobile (Hanya Muncul di HP saat Aktif) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute top-full left-0 right-0 shadow-lg">
+      <nav class="flex flex-col p-6 space-y-4 text-base font-medium text-slate-600">
+        <a href="#tentang" class="mobile-link hover:text-brand-primary transition-colors">Tentang</a>
+        <a href="#keahlian" class="mobile-link hover:text-brand-primary transition-colors">Keahlian</a>
+        <a href="#kualifikasi" class="mobile-link hover:text-brand-primary transition-colors">Kualifikasi</a>
+        <a href="#proyek" class="mobile-link hover:text-brand-primary transition-colors">Proyek</a>
+        <a href="#kontak" class="mobile-link hover:text-brand-primary transition-colors">Kontak</a>
+        <a href="#kontak" class="mobile-link block text-center text-sm font-semibold bg-brand-light text-brand-primary px-4 py-2.5 rounded-full border border-blue-200 hover:bg-brand-primary hover:text-white transition-all pt-2">
+          Hubungi Saya
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -66,7 +94,7 @@
         </div>
       </div>
       <div class="md:w-2/5 flex justify-center">
-        <!-- Ganti src dengan foto profil kamu -->
+        <!-- Ganti dengan foto profil kamu -->
         <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-tr from-brand-primary to-blue-300 rounded-full p-1.5 shadow-2xl">
           <div class="w-full h-full bg-slate-200 rounded-full overflow-hidden flex items-center justify-center text-slate-400 font-medium">
             Foto Profil
@@ -83,7 +111,6 @@
           <p class="text-slate-500 mt-2">Alat kerja yang biasa saya gunakan untuk mengubah ide menjadi website interaktif.</p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <!-- Skill Card -->
           <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 transition-all text-center group">
             <div class="w-12 h-12 bg-brand-light text-brand-primary rounded-lg flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:scale-110 transition-transform">
               &lt;/&gt;
@@ -91,7 +118,6 @@
             <h3 class="font-semibold text-slate-800">HTML & CSS</h3>
             <p class="text-xs text-slate-500 mt-1">Responsive Design, Tailwind CSS</p>
           </div>
-          <!-- Skill Card -->
           <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 transition-all text-center group">
             <div class="w-12 h-12 bg-brand-light text-brand-primary rounded-lg flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:scale-110 transition-transform">
               JS
@@ -99,7 +125,6 @@
             <h3 class="font-semibold text-slate-800">JavaScript</h3>
             <p class="text-xs text-slate-500 mt-1">DOM Manipulation, ES6+, API</p>
           </div>
-          <!-- Skill Card -->
           <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 transition-all text-center group">
             <div class="w-12 h-12 bg-brand-light text-brand-primary rounded-lg flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:scale-110 transition-transform">
               ⚛️
@@ -107,7 +132,6 @@
             <h3 class="font-semibold text-slate-800">React / Next.js</h3>
             <p class="text-xs text-slate-500 mt-1">Component architecture, SPA</p>
           </div>
-          <!-- Skill Card -->
           <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 transition-all text-center group">
             <div class="w-12 h-12 bg-brand-light text-brand-primary rounded-lg flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:scale-110 transition-transform">
               🛠️
@@ -119,15 +143,96 @@
       </div>
     </section>
 
+    <!-- ================= PENDIDIKAN & SERTIFIKAT (BAGIAN BARU) ================= -->
+    <section id="kualifikasi" class="py-20 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-brand-dark">Pendidikan & Penghargaan</h2>
+          <p class="text-slate-500 mt-2">Latar belakang akademis serta pencapaian profesional yang mendukung kualifikasi saya.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Kolom 1: Pendidikan (Timeline) -->
+          <div>
+            <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center text-base shadow-sm">🎓</span>
+              Riwayat Pendidikan
+            </h3>
+            <div class="space-y-8 border-l-2 border-blue-200 pl-6 ml-4">
+              <!-- Pendidikan 1 -->
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-primary border-4 border-white shadow"></div>
+                <span class="text-xs font-semibold bg-brand-light text-brand-primary px-2.5 py-1 rounded-md">2022 - 2026</span>
+                <h4 class="text-lg font-bold text-slate-800 mt-2 group-hover:text-brand-primary transition-colors">S1 Teknik Informatika / Ilmu Komputer</h4>
+                <p class="text-sm font-medium text-slate-600">Universitas Contoh Indonesia</p>
+                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">IPK: 3.85 / 4.00 • Fokus pada Rekayasa Perangkat Lunak, Arsitektur Cloud, dan Pengembangan Web Full-Stack.</p>
+              </div>
+              <!-- Pendidikan 2 -->
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-primary border-4 border-white shadow transition-colors"></div>
+                <span class="text-xs font-semibold bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md">2019 - 2022</span>
+                <h4 class="text-lg font-bold text-slate-800 mt-2 group-hover:text-brand-primary transition-colors">SMK Rekayasa Perangkat Lunak (RPL)</h4>
+                <p class="text-sm font-medium text-slate-600">SMK Negeri 1 Contoh</p>
+                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Aktif dalam klub pemrograman komputer dan mewakili sekolah dalam kompetisi web desain nasional.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Sertifikat & Penghargaan (Cards) -->
+          <div>
+            <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center text-base shadow-sm">🏆</span>
+              Sertifikat & Penghargaan
+            </h3>
+            <div class="space-y-4">
+              <!-- Sertifikat 1 -->
+              <div class="p-5 bg-white rounded-xl border border-slate-200 hover:border-brand-primary hover:shadow-md transition-all flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center shrink-0 font-bold text-lg">
+                  📜
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-slate-800">Meta Front-End Developer Professional</h4>
+                  <p class="text-xs font-medium text-slate-500 mt-0.5">Coursera / Meta • <span class="text-brand-primary font-semibold">Diterbitkan 2025</span></p>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">Sertifikasi profesional intensif mencakup React, JavaScript lanjutan, sistem kontrol versi (Git), dan UI/UX.</p>
+                </div>
+              </div>
+              <!-- Sertifikat 2 -->
+              <div class="p-5 bg-white rounded-xl border border-slate-200 hover:border-brand-primary hover:shadow-md transition-all flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 font-bold text-lg">
+                  🥇
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-slate-800">Juara 1 - Nasional Web Hackathon</h4>
+                  <p class="text-xs font-medium text-slate-500 mt-0.5">TechFest Indonesia • <span class="text-amber-600 font-semibold">2024</span></p>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">Membangun aplikasi web progresif (PWA) untuk pemantauan jejak karbon dan manajemen limbah dalam waktu 48 jam.</p>
+                </div>
+              </div>
+              <!-- Sertifikat 3 -->
+              <div class="p-5 bg-white rounded-xl border border-slate-200 hover:border-brand-primary hover:shadow-md transition-all flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center shrink-0 font-bold text-lg">
+                  ☁️
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-slate-800">AWS Certified Cloud Practitioner</h4>
+                  <p class="text-xs font-medium text-slate-500 mt-0.5">Amazon Web Services • <span class="text-brand-primary font-semibold">Diterbitkan 2024</span></p>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">Validasi keahlian teknis terkait infrastruktur cloud AWS, arsitektur serverless, dan keamanan web.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ================= PROYEK TERPILIH ================= -->
-    <section id="proyek" class="py-20 max-w-6xl mx-auto px-6">
+    <section id="proyek" class="py-20 bg-white max-w-6xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-3xl font-bold text-brand-dark">Karya & Proyek Terpilih</h2>
         <p class="text-slate-500 mt-2">Beberapa proyek web yang telah saya kerjakan dengan fokus pada performa dan estetika.</p>
       </div>
       
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Proyek 1 -->
         <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow flex flex-col">
           <div class="h-56 bg-slate-200 flex items-center justify-center text-slate-400 font-medium">
             Preview Gambar Proyek 1
@@ -152,7 +257,6 @@
           </div>
         </div>
 
-        <!-- Proyek 2 -->
         <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow flex flex-col">
           <div class="h-56 bg-slate-200 flex items-center justify-center text-slate-400 font-medium">
             Preview Gambar Proyek 2
@@ -207,5 +311,35 @@
     </div>
   </footer>
 
+  <!-- JavaScript untuk Hamburger Menu -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // 1. Fungsi untuk buka-tutup menu saat tombol diklik
+    hamburgerBtn.addEventListener('click', () => {
+      const isMenuHidden = mobileMenu.classList.contains('hidden');
+      
+      if (isMenuHidden) {
+        mobileMenu.classList.remove('hidden');
+        // Mengubah icon garis tiga menjadi tanda silang (X)
+        hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      } else {
+        mobileMenu.classList.add('hidden');
+        // Mengubah kembali tanda silang menjadi garis tiga
+        hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      }
+    });
+
+    // 2. Fungsi agar menu otomatis menutup kembali setelah kita klik salah satu link menu
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      });
+    });
+  </script>
 </body>
 </html>
