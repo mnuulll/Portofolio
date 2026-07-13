@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nama Kamu | Professional Portfolio</title>
-  <!-- Tailwind CSS CDN -->
+  <title>Mohammad Rizky Imanulhaq | Professional Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Kustomisasi palet warna biru agar konsisten
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              light: '#eff6ff', // Biru sangat muda (latar aksen)
-              primary: '#2563eb', // Biru terang (tombol & link)
-              dark: '#1e3a8a', // Biru navy gelap (teks heading)
+              light: '#eff6ff', 
+              primary: '#2563eb', 
+              dark: '#1e3a8a', 
             }
           }
         }
@@ -25,43 +23,38 @@
 </head>
 <body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-brand-primary selection:text-white">
 
-  <!-- ================= NAVIGASI ================= -->
-  <!-- ================= NAVIGASI ================= -->
   <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-bold text-brand-dark tracking-tight">
-        Nama<span class="text-brand-primary">Kamu.</span>
+        Mohammad Rizky <span class="text-brand-primary">Imanulhaq.</span>
       </a>
       
-      <!-- Navigasi Desktop (Disembunyikan di HP dengan 'hidden md:flex') -->
       <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
         <a href="#tentang" class="hover:text-brand-primary transition-colors">Tentang</a>
         <a href="#keahlian" class="hover:text-brand-primary transition-colors">Keahlian</a>
-        <a href="#kualifikasi" class="hover:text-brand-primary transition-colors">Kualifikasi</a>
+        <a href="#pendidikan" class="hover:text-brand-primary transition-colors">Pendidikan</a>
+        <a href="#penghargaan" class="hover:text-brand-primary transition-colors">Penghargaan</a>
         <a href="#proyek" class="hover:text-brand-primary transition-colors">Proyek</a>
         <a href="#kontak" class="hover:text-brand-primary transition-colors">Kontak</a>
       </nav>
       
-      <!-- Tombol Desktop (Disembunyikan di HP dengan 'hidden md:inline-block') -->
       <a href="#kontak" class="hidden md:inline-block text-sm font-semibold bg-brand-light text-brand-primary px-4 py-2 rounded-full border border-blue-200 hover:bg-brand-primary hover:text-white transition-all">
         Hubungi Saya
       </a>
 
-      <!-- Tombol Hamburger (Hanya Muncul di HP dengan 'md:hidden') -->
       <button id="hamburger-btn" class="md:hidden text-slate-600 hover:text-brand-primary focus:outline-none" aria-label="Buka Menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <!-- Garis Tiga (Hamburger) -->
           <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
 
-    <!-- Dropdown Menu Mobile (Hanya Muncul di HP saat Aktif) -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute top-full left-0 right-0 shadow-lg">
       <nav class="flex flex-col p-6 space-y-4 text-base font-medium text-slate-600">
         <a href="#tentang" class="mobile-link hover:text-brand-primary transition-colors">Tentang</a>
         <a href="#keahlian" class="mobile-link hover:text-brand-primary transition-colors">Keahlian</a>
-        <a href="#kualifikasi" class="mobile-link hover:text-brand-primary transition-colors">Kualifikasi</a>
+        <a href="#pendidikan" class="mobile-link hover:text-brand-primary transition-colors">Pendidikan</a>
+        <a href="#penghargaan" class="mobile-link hover:text-brand-primary transition-colors">Penghargaan</a>
         <a href="#proyek" class="mobile-link hover:text-brand-primary transition-colors">Proyek</a>
         <a href="#kontak" class="mobile-link hover:text-brand-primary transition-colors">Kontak</a>
         <a href="#kontak" class="mobile-link block text-center text-sm font-semibold bg-brand-light text-brand-primary px-4 py-2.5 rounded-full border border-blue-200 hover:bg-brand-primary hover:text-white transition-all pt-2">
@@ -72,11 +65,10 @@
   </header>
 
   <main class="pt-20">
-    <!-- ================= HERO SECTION ================= -->
     <section id="tentang" class="py-20 md:py-32 max-w-6xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">
       <div class="md:w-3/5 space-y-6 text-center md:text-left">
         <div class="inline-block bg-brand-light text-brand-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100">
-          🚀 Tersedia untuk Proyek & Rekrutmen
+          🚀 STEM
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold text-brand-dark leading-tight">
           Membangun Solusi Digital yang <span class="text-brand-primary">Modern & Bersih.</span>
@@ -94,7 +86,6 @@
         </div>
       </div>
       <div class="md:w-2/5 flex justify-center">
-        <!-- Ganti dengan foto profil kamu -->
         <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-tr from-brand-primary to-blue-300 rounded-full p-1.5 shadow-2xl">
           <div class="w-full h-full bg-slate-200 rounded-full overflow-hidden flex items-center justify-center text-slate-400 font-medium">
             Foto Profil
@@ -103,7 +94,6 @@
       </div>
     </section>
 
-    <!-- ================= KEAHLIAN / SKILLS ================= -->
     <section id="keahlian" class="py-20 bg-white border-y border-slate-200">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-12">
@@ -143,44 +133,40 @@
       </div>
     </section>
 
-    <!-- ================= PENDIDIKAN & SERTIFIKAT (BAGIAN BARU) ================= -->
-    <section id="kualifikasi" class="py-20 bg-slate-50 border-b border-slate-200">
+    <section id="pendidikan" class="py-20 bg-slate-50 border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-brand-dark">Pendidikan & Penghargaan</h2>
+          <h2 class="text-3xl font-bold text-brand-dark">Pendidikan</h2>
           <p class="text-slate-500 mt-2">Latar belakang akademis serta pencapaian profesional yang mendukung kualifikasi saya.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-12">
-          <!-- Kolom 1: Pendidikan (Timeline) -->
           <div>
             <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2.5">
               <span class="w-9 h-9 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center text-base shadow-sm">🎓</span>
               Riwayat Pendidikan
             </h3>
             <div class="space-y-8 border-l-2 border-blue-200 pl-6 ml-4">
-              <!-- Pendidikan 1 -->
               <div class="relative group">
                 <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-primary border-4 border-white shadow"></div>
-                <span class="text-xs font-semibold bg-brand-light text-brand-primary px-2.5 py-1 rounded-md">2022 - 2026</span>
-                <h4 class="text-lg font-bold text-slate-800 mt-2 group-hover:text-brand-primary transition-colors">S1 Teknik Informatika / Ilmu Komputer</h4>
-                <p class="text-sm font-medium text-slate-600">Universitas Contoh Indonesia</p>
+                <span class="text-xs font-semibold bg-brand-light text-brand-primary px-2.5 py-1 rounded-md">2024 - Sekarang</span>
+                <h4 class="text-lg font-bold text-slate-800 mt-2 group-hover:text-brand-primary transition-colors"> Fisika | Matematika Tingkat Lanjut | Kimia | Geografi</h4>
+                <p class="text-sm font-medium text-slate-600">SMAN 1 Gegesik</p>
                 <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">IPK: 3.85 / 4.00 • Fokus pada Rekayasa Perangkat Lunak, Arsitektur Cloud, dan Pengembangan Web Full-Stack.</p>
-              </div>
-              <!-- Pendidikan 2 -->
-              <div class="relative group">
-                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-primary border-4 border-white shadow transition-colors"></div>
-                <span class="text-xs font-semibold bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md">2019 - 2022</span>
-                <h4 class="text-lg font-bold text-slate-800 mt-2 group-hover:text-brand-primary transition-colors">SMK Rekayasa Perangkat Lunak (RPL)</h4>
-                <p class="text-sm font-medium text-slate-600">SMK Negeri 1 Contoh</p>
-                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Aktif dalam klub pemrograman komputer dan mewakili sekolah dalam kompetisi web desain nasional.</p>
               </div>
             </div>
           </div>
+        </div>
+        </div>
 
-          <!-- Kolom 2: Sertifikat & Penghargaan (Cards) -->
-          <div>
-            <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2.5">
+      <section id="penghargaan" class="py-20 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-brand-dark">Pendidikan</h2>
+          <p class="text-slate-500 mt-2">Latar belakang akademis serta pencapaian profesional yang mendukung kualifikasi saya.</p>
+        </div>
+        
+        <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2.5">
               <span class="w-9 h-9 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center text-base shadow-sm">🏆</span>
               Sertifikat & Penghargaan
             </h3>
@@ -220,12 +206,10 @@
               </div>
             </div>
           </div>
-        </div>
 
       </div>
     </section>
 
-    <!-- ================= PROYEK TERPILIH ================= -->
     <section id="proyek" class="py-20 bg-white max-w-6xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-3xl font-bold text-brand-dark">Karya & Proyek Terpilih</h2>
@@ -249,7 +233,7 @@
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <a href="#" class="text-sm font-semibold text-brand-primary hover:underline flex items-center gap-1">
+              <a href="https://absensi-sebelum-sholat-subuh.vercel.app/" class="text-sm font-semibold text-brand-primary hover:underline flex items-center gap-1">
                 Lihat Demo Live &rarr;
               </a>
               <a href="#" class="text-xs text-slate-500 hover:text-slate-800 font-medium">Source Code</a>
@@ -283,7 +267,6 @@
       </div>
     </section>
 
-    <!-- ================= KONTAK ================= -->
     <section id="kontak" class="py-20 bg-brand-dark text-white text-center">
       <div class="max-w-4xl mx-auto px-6 space-y-6">
         <h2 class="text-3xl md:text-4xl font-bold">Tertarik Untuk Bekerja Sama?</h2>
@@ -299,41 +282,35 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p>&copy; 2026 Nama Kamu. All rights reserved.</p>
+      <p>&copy; 2026 Mohammad Rizky Imanulhaq. All rights reserved.</p>
       <div class="flex space-x-6">
         <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
         <a href="#" class="hover:text-white transition-colors">GitHub</a>
-        <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        <a href="https://www.instagram.com/mnuulllll" class="hover:text-white transition-colors">Instagram</a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript untuk Hamburger Menu -->
   <script>
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    // 1. Fungsi untuk buka-tutup menu saat tombol diklik
     hamburgerBtn.addEventListener('click', () => {
       const isMenuHidden = mobileMenu.classList.contains('hidden');
       
       if (isMenuHidden) {
         mobileMenu.classList.remove('hidden');
-        // Mengubah icon garis tiga menjadi tanda silang (X)
         hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
       } else {
         mobileMenu.classList.add('hidden');
-        // Mengubah kembali tanda silang menjadi garis tiga
         hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       }
     });
 
-    // 2. Fungsi agar menu otomatis menutup kembali setelah kita klik salah satu link menu
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
